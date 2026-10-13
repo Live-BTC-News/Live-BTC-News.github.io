@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live BTC News on GitHub</title>
+<meta name="description" content="Open tooling and public data trackers from Live BTC News: the Zcash price tracker, the Bitcoin to gold ratio, and the daily headline archive.">
+<link rel="canonical" href="https://live-btc-news.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#070a0f; --panel:#0d141d; --panel-2:#111a26; --line:#1e2c3c;
+    --text:#eef2f7; --muted:#8fa0b3; --muted-2:#5d6d80;
+    --btc:#f7931a; --btc-dim:#a35f0d; --blue:#2f8fea; --blue-deep:#123f6b;
+    --max:720px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--ink); color:var(--text);
+    font:16px/1.65 Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:3rem 16px 4rem}
+
+  header{border-bottom:1px solid var(--line); padding-bottom:1.6rem; margin-bottom:2rem}
+  h1{
+    font-family:"Bungee", system-ui, sans-serif; font-weight:400;
+    font-size:clamp(1.5rem, 6vw, 2.1rem); line-height:1.1; margin:0 0 .6rem;
+    letter-spacing:.01em;
+  }
+  .mark{
+    display:inline-block; background:var(--btc); color:var(--ink);
+    padding:0 .28em; margin-right:.12em; border-radius:2px;
+  }
+  .tag{color:var(--muted); font-size:.95rem; margin:0}
+
+  h2{
+    font-family:"Bungee", system-ui, sans-serif; font-weight:400;
+    font-size:.82rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--btc); margin:2.4rem 0 .8rem;
+  }
+  p{margin:0 0 1rem}
+  a{color:var(--blue); text-decoration:none; border-bottom:1px solid var(--blue-deep)}
+  a:hover{color:var(--btc); border-bottom-color:var(--btc-dim)}
+
+  .card{
+    border:1px solid var(--line); border-left:3px solid var(--btc);
+    background:linear-gradient(180deg,var(--panel-2),var(--panel));
+    padding:1.1rem 1.2rem; margin:0 0 1rem;
+  }
+  .card h3{
+    font-size:1.02rem; margin:0 0 .4rem; font-weight:700; color:var(--text);
+  }
+  .card p{margin:0; color:var(--muted); font-size:.93rem}
+  .card p a{color:var(--blue)}
+
+  footer{
+    margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--line);
+    color:var(--muted-2); font-size:.82rem;
+  }
+  footer a{color:var(--muted); border-bottom-color:var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1><span class="mark">BTC</span> Live BTC News</h1>
+    <p class="tag">Open tooling and public data trackers.</p>
+  </header>
+
+  <p>Live BTC News publishes a daily archive of Bitcoin and crypto industry headlines, each one summarized in our own words with a link back to the outlet that reported it. Alongside the archive we run a handful of small reference trackers that compute from public exchange data in the browser, with no account and no API key involved.</p>
+
+  <p>This page exists to point at those trackers and to hold the code we publish openly.</p>
+
+  <h2>Trackers</h2>
+
+  <div class="card">
+    <h3>Zcash price and ZEC/BTC ratio</h3>
+    <p>Live ZEC pricing, the ratio against Bitcoin, market cap and a one-year chart, plus a running archive of Zcash news. The ratio view inverts to show how many ZEC one Bitcoin buys, which is a figure almost nobody publishes.
+    <a href="https://livebtcnews.com/zcash/">Open the Zcash tracker</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Bitcoin priced in gold</h3>
+    <p>How many troy ounces of gold one bitcoin buys, updated continuously, with a one-year chart. Pricing in gold removes the dollar from the comparison, so a move that was really about the dollar shows up as a flat line rather than a rally.
+    <a href="https://livebtcnews.com/bitcoin-priced-in-gold/">Open the gold ratio page</a></p>
+  </div>
+
+  <h2>Notes on the data</h2>
+
+  <p>Figures come from public exchange and pricing endpoints, fetched by the reader's own browser rather than routed through a server. Prices may be delayed, the pages are references rather than trading tools, and nothing published is investment advice. The operators may hold positions in assets covered.</p>
+
+  <footer>
+    <p>Repositories live under <a href="https://github.com/Live-BTC-News">github.com/Live-BTC-News</a>. The daily archive is at <a href="https://livebtcnews.com/">livebtcnews.com</a>.</p>
+  </footer>
+
+</div>
+</body>
+</html>
